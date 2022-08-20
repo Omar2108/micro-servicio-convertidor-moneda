@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "app.messege.trm.dolar",
+    "type": "java.lang.String",
+    "description": "A description for 'app.messege.trm.dolar'"
+  },
+  {
+    "name": "app.messege.trm.pesos",
+    "type": "java.lang.String",
+    "description": "A description for 'app.messege.trm.pesos'"
+  }
+]}
