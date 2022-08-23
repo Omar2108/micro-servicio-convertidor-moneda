@@ -10,28 +10,24 @@ import org.springframework.web.bind.annotation.RestController;
 @Configuration
 public class ControllerConvertidor {
 
-	private int trcDolar = 4231;
+	@Value("${app.trm}")
+	private Integer trm;
 	
-	@Value("${app.messege.trm.dolar}")
-	private String trmDolar;
-	
-	@Value("${app.messege.trm.pesos}")
-	private String trmPesos;
 
 	@GetMapping("/pesos/{dolar}")
-	public Monedas convertirPesos(@PathVariable int dolar) {
+	public Monedas convertirPesos(@PathVariable Double dolar) {
 		Monedas mon = new Monedas();
-		mon.setPesos(dolar * trcDolar);
-		mon.setTrm(trmPesos);
+		mon.setPesos(dolar * trm);
+		mon.setTrm(trm);
 		mon.setDolar(dolar);
 		return mon;
 	}
 
 	@GetMapping("/dolar/{pesos}")
-	public Monedas convertirDolar(@PathVariable int pesos) {
+	public Monedas convertirDolar(@PathVariable Double pesos) {
 		Monedas mon = new Monedas();
-		mon.setDolar(pesos / trcDolar);
-		mon.setTrm(trmDolar);
+		mon.setDolar(pesos / trm);
+		mon.setTrm(trm);
 		mon.setPesos(pesos);
 		return mon;
 	}

@@ -2,13 +2,13 @@ package com.omar.convertidor;
 
 public class Monedas {
 
-	private int pesos;
-	private String trm;
-	private int dolar;
+	private Double pesos;
+	private Integer trm;
+	private Double dolar;
 	
 	
 	
-	public Monedas(int pesos, String trm, int dolar) {
+	public Monedas(Double pesos, Integer trm, Double dolar) {
 		this.pesos = pesos;
 		this.trm = trm;
 		this.dolar = dolar;
@@ -17,27 +17,32 @@ public class Monedas {
 	public Monedas() {
 		
 	}
-	
-	
-	
-	public String getTrm() {
+
+	public Double getPesos() {
+		return pesos;
+	}
+
+	public void setPesos(Double pesos) {
+		this.pesos = pesos;
+	}
+
+	public Integer getTrm() {
 		return trm;
 	}
 
-	public void setTrm(String trm) {
+	public void setTrm(Integer trm) {
 		this.trm = trm;
 	}
 
-	public int getPesos() {
-		return pesos;
-	}
-	public void setPesos(int pesos) {
-		this.pesos = pesos;
-	}
-	public int getDolar() {
+	public Double getDolar() {
 		return dolar;
 	}
-	public void setDolar(int dolar) {
+
+	public void setDolar(Double dolar) {
 		this.dolar = dolar;
 	}
+	
+	
+	
+	
 }
