@@ -15,7 +15,7 @@ class MicroConvertidorApplicationTests {
 	@Test
 	public void convertirPesos() {
 		Monedas moneda = control.convertirPesos(10.00);
-		assertThat(moneda.getPesos()).isEqualTo(42310.00);
+		assertThat(moneda.getPesos()).isEqualTo(42310.0);
 		
 		
 	}
@@ -23,7 +23,7 @@ class MicroConvertidorApplicationTests {
 	@Test
 	public void convertirDolar() {
 		Monedas moneda = control.convertirPesos(100000.00);
-		assertThat(moneda.getDolar()).isEqualTo(23.63);
+		assertThat(moneda.getDolar()).isEqualTo(23.63507445048452);
 	}
 
 }
